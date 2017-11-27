@@ -1,12 +1,40 @@
 <div class="container">
   <h1>{{title}}</h1>
-  <p>Welcome to {{title}}</p>
-  <div class="form-group">
-    <label for="user">Select a user</label>
-    <select class="form-control" id="user">
-    {{#each users}}
-      <option>{{name}}</option>
-    {{/each}}
-    </select>
-</div>
+
+  <!-- ввод новых слов -->
+  <form action='/dict' method='POST'>
+    <div class="form-group">
+      <label for="word">Word</label>
+      <input type="text" class="form-control" id="word" name="word" placeholder="word">
+    </div>
+    <div class="form-group">
+      <label for="translate">Password</label>
+      <input type="text" class="form-control" id="translate" name="translate" placeholder="translate">
+    </div>
+    <button type="submit" class="btn btn-primary">Add new word in dictionary</button>
+  </form>
+
+
+  <!-- показ всех слов в словаре -->
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Word</th>
+        <th scope="col">Translate</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each words}}
+      <tr>
+        <th scope="row">1</th>
+        <td>{{word}}</td>
+        <td>{{translate}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+
+
 </div>

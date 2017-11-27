@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <p>Welcome to {{title}}</p>
+
+  {{#if selectedUser}}
+      <div class="alert alert-info" role="alert">
+        <p class="text-right">Username: <strong>{{selectedUser}}</strong></p>
+      </div>
+    {{else}}    
+      <div class="alert alert-danger" role="alert">
+        <p class="text-center">User haven't choose</p>
+      </div>
+  {{/if}}
+
+</div>
