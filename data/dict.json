@@ -1,0 +1,27 @@
+[
+  {
+    "id":"1",
+    "word":"boilerplate",
+    "translate":"шаблонный"
+  },
+  {
+    "id":"2",
+    "word":"present",
+    "translate":"представлять"
+  },
+  {
+    "id":"3",
+    "word":"amend",
+    "translate":"изменить"
+  },
+  {
+    "id":"4",
+    "word":"map",
+    "translate":"отображать"
+  },
+  {
+    "id":"5",
+    "word":"knowingly",
+    "translate":"сознательно"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "idUser":"1",
+    "idWord":"1"
+  },
+  {
+    "idUser":"1",
+    "idWord":"2"
+  },
+  {
+    "idUser":"1",
+    "idWord":"3"
+  },
+  {
+    "idUser":"1",
+    "idWord":"4"
+  },
+  {
+    "idUser":"1",
+    "idWord":"5"
+  },
+  {
+    "idUser":"2",
+    "idWord":"1"
+  },
+  {
+    "idUser":"2",
+    "idWord":"2"
+  },
+  {
+    "idUser":"2",
+    "idWord":"3"
+  }
+]
