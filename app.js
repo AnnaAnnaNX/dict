@@ -12,12 +12,9 @@ var dict = require('./routes/dict');
 var app = express();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/dict', { useMongoClient: true });
+mongoose.connect('mongodb://localhost:27017/dict', { useMongoClient: true });
 mongoose.Promise = global.Promise;
 
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public

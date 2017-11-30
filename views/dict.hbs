@@ -1,19 +1,21 @@
-<div class="container">
-  <h1>{{title}}</h1>
-
   <!-- ввод новых слов -->
-  <form action='/dict' method='POST'>
-    <div class="form-group">
-      <label for="word">Word</label>
-      <input type="text" class="form-control" id="word" name="word" placeholder="word">
+  <form action='/dict' method='POST' class="card">
+    <div class='card-body'>
+      <h4 class="card-title">Add/update a word</h4>
+      <div class="form-group">
+        <label for="word">Word</label>
+        <input type="text" class="form-control" id="word" name="word" placeholder="word" value="{{word.word}}">
+      </div>
+      <div class="form-group">
+        <label for="translate">Password</label>
+        <input type="text" class="form-control" id="translate" name="translate" 
+              placeholder="translate" value="{{word.translate}}">
+      </div>
+      <button type="submit" class="btn btn-primary">Add new word in dictionary</button>
     </div>
-    <div class="form-group">
-      <label for="translate">Password</label>
-      <input type="text" class="form-control" id="translate" name="translate" placeholder="translate">
-    </div>
-    <button type="submit" class="btn btn-primary">Add new word in dictionary</button>
   </form>
 
+  <h1>Dictory</h1>
 
   <!-- показ всех слов в словаре -->
   <table class="table table-striped">
@@ -22,19 +24,19 @@
         <th scope="col">#</th>
         <th scope="col">Word</th>
         <th scope="col">Translate</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
     <tbody>
       {{#each words}}
       <tr>
-        <th scope="row">1</th>
+        <th scope="row">{{ @index }}</th>
         <td>{{word}}</td>
         <td>{{translate}}</td>
+        <td><a href='/dict/update/{{word}}'>Update</a></td>
+        <td><a href='/dict/delete/{{word}}'>Delete</a></td>
       </tr>
       {{/each}}
     </tbody>
   </table>
-
-
-
-</div>
